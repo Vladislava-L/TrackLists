@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		F2D7E7DA25CDE495005FF2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7D925CDE495005FF2BB /* AppDelegate.swift */; };
 		F2D7E7DC25CDE495005FF2BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7DB25CDE495005FF2BB /* SceneDelegate.swift */; };
-		F2D7E7DE25CDE495005FF2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7DD25CDE495005FF2BB /* ViewController.swift */; };
 		F2D7E7E125CDE495005FF2BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D7E7DF25CDE495005FF2BB /* Main.storyboard */; };
 		F2D7E7E325CDE496005FF2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7E7E225CDE496005FF2BB /* Assets.xcassets */; };
 		F2D7E7E625CDE496005FF2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D7E7E425CDE496005FF2BB /* LaunchScreen.storyboard */; };
+		F2D7E7F625CDE6E2005FF2BB /* TrackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7F525CDE6E2005FF2BB /* TrackListTableViewController.swift */; };
+		F2D7E7F925CDE717005FF2BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7F825CDE717005FF2BB /* DetailViewController.swift */; };
+		F2D7E7FD25CDEE0B005FF2BB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7FC25CDEE0B005FF2BB /* Song.swift */; };
+		F2D7E80025CDEF5A005FF2BB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7E7FF25CDEF5A005FF2BB /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F2D7E7D625CDE495005FF2BB /* TrackLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D7E7D925CDE495005FF2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2D7E7DB25CDE495005FF2BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F2D7E7DD25CDE495005FF2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2D7E7E025CDE495005FF2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2D7E7E225CDE496005FF2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D7E7E525CDE496005FF2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2D7E7E725CDE496005FF2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D7E7F525CDE6E2005FF2BB /* TrackListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewController.swift; sourceTree = "<group>"; };
+		F2D7E7F825CDE717005FF2BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F2D7E7FC25CDEE0B005FF2BB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F2D7E7FF25CDEF5A005FF2BB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		F2D7E7D825CDE495005FF2BB /* TrackLists */ = {
 			isa = PBXGroup;
 			children = (
-				F2D7E7D925CDE495005FF2BB /* AppDelegate.swift */,
-				F2D7E7DB25CDE495005FF2BB /* SceneDelegate.swift */,
-				F2D7E7DD25CDE495005FF2BB /* ViewController.swift */,
-				F2D7E7DF25CDE495005FF2BB /* Main.storyboard */,
+				F2D7E7EE25CDE4E3005FF2BB /* Delegate */,
+				F2D7E7F425CDE580005FF2BB /* ModelManager */,
+				F2D7E7F325CDE567005FF2BB /* Model */,
+				F2D7E7F125CDE536005FF2BB /* View */,
+				F2D7E7F225CDE552005FF2BB /* Controllers */,
 				F2D7E7E225CDE496005FF2BB /* Assets.xcassets */,
-				F2D7E7E425CDE496005FF2BB /* LaunchScreen.storyboard */,
 				F2D7E7E725CDE496005FF2BB /* Info.plist */,
 			);
 			path = TrackLists;
+			sourceTree = "<group>";
+		};
+		F2D7E7EE25CDE4E3005FF2BB /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E7D925CDE495005FF2BB /* AppDelegate.swift */,
+				F2D7E7DB25CDE495005FF2BB /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F2D7E7F125CDE536005FF2BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E7DF25CDE495005FF2BB /* Main.storyboard */,
+				F2D7E7E425CDE496005FF2BB /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2D7E7F225CDE552005FF2BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E7F525CDE6E2005FF2BB /* TrackListTableViewController.swift */,
+				F2D7E7F825CDE717005FF2BB /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F2D7E7F325CDE567005FF2BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E7FC25CDEE0B005FF2BB /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2D7E7F425CDE580005FF2BB /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7E7FF25CDEF5A005FF2BB /* DataManager.swift */,
+			);
+			path = ModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D7E7DE25CDE495005FF2BB /* ViewController.swift in Sources */,
 				F2D7E7DA25CDE495005FF2BB /* AppDelegate.swift in Sources */,
+				F2D7E80025CDEF5A005FF2BB /* DataManager.swift in Sources */,
 				F2D7E7DC25CDE495005FF2BB /* SceneDelegate.swift in Sources */,
+				F2D7E7F625CDE6E2005FF2BB /* TrackListTableViewController.swift in Sources */,
+				F2D7E7F925CDE717005FF2BB /* DetailViewController.swift in Sources */,
+				F2D7E7FD25CDEE0B005FF2BB /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
